@@ -1,0 +1,115 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         Role     @default(ADMIN)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  posts        Post[]
+
+  @@index([email])
+}
+
+enum Role {
+  ADMIN
+  SUPER_ADMIN
+}
+
+model Post {
+  id            String   @id @default(cuid())
+  title         String
+  slug          String   @unique
+  content       String   @db.Text
+  excerpt       String?
+  featuredImage String?
+  published     Boolean  @default(false)
+  authorId      String
+  author        User     @relation(fields: [authorId], references: [id])
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([slug])
+  @@index([published])
+  @@index([createdAt])
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  title       String
+  description String   @db.Text
+  date        DateTime
+  endDate     DateTime?
+  location    String
+  image       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([date])
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  url       String
+  publicId  String
+  caption   String?
+  category  String   @default("General")
+  createdAt DateTime @default(now())
+
+  @@index([category])
+}
+
+model Staff {
+  id           String   @id @default(cuid())
+  name         String
+  role         String
+  department   String?
+  bio          String?  @db.Text
+  photoUrl     String?
+  photoPublicId String?
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([department])
+}
+
+enum PageSlug {
+  ABOUT
+  ACADEMICS
+  ADMISSIONS
+}
+
+model PageContent {
+  id        String   @id @default(cuid())
+  page      PageSlug
+  section   String
+  content   String   @db.Text
+  updatedAt DateTime @updatedAt
+
+  @@unique([page, section])
+  @@index([page])
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String
+  message   String   @db.Text
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([read])
+  @@index([createdAt])
+}
