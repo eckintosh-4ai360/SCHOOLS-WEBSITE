@@ -68,13 +68,13 @@ export default async function HomePage() {
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full mb-6">
               <Star className="w-4 h-4 text-[#e8a020]" />
-              Ranked #1 Regional School 2024
+              Ranked #1 Regional School 2026
             </div>
             <h1 className="mb-6 font-serif text-4xl font-bold leading-tight text-white text-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl">
               Empowering <span className="text-[#e8a020]">Minds</span>,<br />Shaping Futures
             </h1>
             <p className="mb-8 max-w-lg text-lg leading-relaxed text-blue-100 sm:text-xl">
-              At Greenfield Academy, we nurture curious, compassionate, and capable leaders ready to make a difference in the world.
+              At Eckintosh Academy, we nurture curious, compassionate, and capable leaders ready to make a difference in the world.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <Link href="/admissions" className="btn-accent w-full px-8 py-4 text-base sm:w-auto">
@@ -88,7 +88,7 @@ export default async function HomePage() {
           </div>
           <div className="hidden lg:grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div className="rounded-2xl overflow-hidden h-48 bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+              <div className="rounded-2xl overflow-hidden h-48 bg-white/10 backdrop-blur-sm border-2 border-white/50 flex items-center justify-center">
                 <div className="text-center text-white">
                   <div className="text-4xl font-bold font-serif text-[#e8a020]">40+</div>
                   <div className="text-sm text-blue-200">Years of Excellence</div>
@@ -108,7 +108,7 @@ export default async function HomePage() {
                   <div className="text-sm text-blue-200">University Acceptance</div>
                 </div>
               </div>
-              <div className="rounded-2xl overflow-hidden h-48 bg-[#e8a020]/20 backdrop-blur-sm border border-[#e8a020]/30 flex items-center justify-center">
+              <div className="rounded-2xl overflow-hidden h-48 bg-[#e8a020]/20 backdrop-blur-sm border-2 border-[#e8a020]/30 flex items-center justify-center">
                 <div className="text-center text-white">
                   <div className="text-4xl font-bold font-serif">80+</div>
                   <div className="text-sm text-blue-200">Expert Educators</div>
