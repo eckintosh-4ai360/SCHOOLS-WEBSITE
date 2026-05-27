@@ -5,6 +5,8 @@ import { Plus, Pencil } from "lucide-react";
 import DeleteStaffButton from "@/components/dashboard/DeleteStaffButton";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = { title: "Manage Staff" };
 
 export default async function AdminStaffPage() {

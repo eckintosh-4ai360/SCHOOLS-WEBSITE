@@ -4,6 +4,8 @@ import { Plus, Pencil, Trash2, MapPin, Calendar } from "lucide-react";
 import DeleteEventButton from "@/components/dashboard/DeleteEventButton";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = { title: "Manage Events" };
 
 export default async function AdminEventsPage() {

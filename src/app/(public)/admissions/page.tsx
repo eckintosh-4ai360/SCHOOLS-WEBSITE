@@ -3,6 +3,8 @@ import Link from "next/link";
 import { CheckCircle, Download, ArrowRight, Phone, Mail } from "lucide-react";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "Admissions | Eckintosh Academy",
   description: "Apply to Eckintosh Academy. Learn about our admissions process, requirements, and how to get started.",

@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import StaffForm from "@/components/dashboard/StaffForm";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = { title: "Edit Staff Member" };
 
 export default async function EditStaffPage({

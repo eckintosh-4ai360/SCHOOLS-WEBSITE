@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import EditPostClient from "@/components/dashboard/EditPostClient";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = { title: "Edit Post" };
 
 export default async function EditPostPage({ params }: { params: Promise<{ id: string }> }) {

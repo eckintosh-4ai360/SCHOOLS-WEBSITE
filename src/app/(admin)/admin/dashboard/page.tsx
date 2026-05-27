@@ -3,6 +3,8 @@ import Link from "next/link";
 import { FileText, Calendar, Image, MessageSquare, Users, TrendingUp, Plus, Eye, Mail } from "lucide-react";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = { title: "Dashboard" };
 
 async function getDashboardData() {

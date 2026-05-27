@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { CalendarDays, Clock3, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "Events | Eckintosh Academy",
   description: "Stay up to date with upcoming events, ceremonies, and activities at Eckintosh Academy.",

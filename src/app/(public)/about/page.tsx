@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Users, Heart, Globe, CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "About Us |  Academy",
   description: "Learn about Greenfield Academy's history, mission, vision, and the dedicated staff who make our school exceptional.",

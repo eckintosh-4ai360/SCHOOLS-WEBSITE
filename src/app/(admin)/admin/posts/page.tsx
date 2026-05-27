@@ -4,6 +4,8 @@ import { Plus, Pencil, Trash2, Eye, EyeOff } from "lucide-react";
 import DeletePostButton from "@/components/dashboard/DeletePostButton";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = { title: "Manage Posts" };
 
 export default async function AdminPostsPage() {

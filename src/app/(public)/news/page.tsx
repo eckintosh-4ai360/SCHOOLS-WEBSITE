@@ -4,6 +4,8 @@ import Image from "next/image";
 import { BookOpen, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "News & Blog | Eckintosh Academy",
   description: "Stay up to date with the latest news, announcements, and stories from Eckintosh Academy.",

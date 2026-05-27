@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 import GalleryGrid from "@/components/public/GalleryGrid";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "Gallery | Eckintosh Academy",
   description: "Browse photos from events, sports, graduation, and everyday life at Eckintosh Academy.",

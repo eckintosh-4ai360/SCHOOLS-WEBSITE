@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 import { BookOpen, Beaker, Calculator, Globe, Music, Dumbbell } from "lucide-react";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "Academics | Eckintosh Academy",
   description: "Explore our comprehensive academic programs from Primary through High School, designed to challenge and inspire every learner.",
